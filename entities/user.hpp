@@ -1,5 +1,5 @@
 #include <iostream>
-#include "train.hpp"
+#include "vehicle.hpp"
 #include <string>
 #include <vector>
 
@@ -9,5 +9,5 @@ struct User {
   string userId;
   string name;
   string aadharCard;
-  vector<Train> trains;
+  vector<Vehicle> vehicles;
 };

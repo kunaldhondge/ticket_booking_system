@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include "../entities/vehicle.hpp"
 #include "../external/json.hpp"
 
 using namespace std;
@@ -19,7 +21,7 @@ class FileIO {
             }
             
             json entityJson = {
-                {"trainId", entity.trainId},
+                {"trainId", entity.vehicleId},
                 {"source", entity.source},
                 {"destination", entity.destination},
                 {"departureTime", entity.departureTime},
@@ -50,7 +52,7 @@ class FileIO {
 
             for(const auto& item : j) {
                 T entity;
-                entity.trainId = item["trainId"];
+                entity.vehicleId = item["vehicleId"];
                 entity.source = item["source"];
                 entity.destination = item["destination"];
                 entity.departureTime = item["departureTime"];
